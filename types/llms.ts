@@ -1,6 +1,7 @@
 import { ModelProvider } from "."
 
 export type LLMID =
+  | AzureLLMID
   | OpenAILLMID
   | GoogleLLMID
   | AnthropicLLMID
@@ -8,13 +9,75 @@ export type LLMID =
   | GroqLLMID
   | PerplexityLLMID
 
-// OpenAI Models (UPDATED 5/13/24)
+// Azure OpenAI Models (UPDATED 2/22/26)
+export type AzureLLMID =
+  // GPT-5.x Chat Models
+  | "gpt-5.2-chat"
+  | "gpt-5.2"
+  | "gpt-5.1-chat"
+  | "gpt-5.1"
+  | "gpt-5-chat"
+  | "gpt-5-pro"
+  | "gpt-5"
+  | "gpt-5-mini"
+  | "gpt-5-nano"
+  // GPT-4.x Models
+  | "gpt-4.1"
+  | "gpt-4.1-mini"
+  | "gpt-4.1-nano"
+  | "gpt-4.5-preview"
+  | "gpt-4o"
+  | "gpt-4o-mini"
+  | "gpt-4"
+  | "gpt-35-turbo-16k"
+  // O-Series Reasoning Models
+  | "o3"
+  | "o3-mini"
+  | "o3-pro"
+  | "o3-deep-research"
+  | "o4-mini"
+  | "o1"
+  | "o1-mini"
+  | "o1-preview"
+  // Codex Models
+  | "gpt-5.2-codex"
+  | "gpt-5.1-codex-max"
+  | "gpt-5.1-codex"
+  | "gpt-5.1-codex-mini"
+  | "gpt-5-codex"
+  | "codex-mini"
+  // Audio Models
+  | "gpt-4o-transcribe"
+  | "gpt-4o-transcribe-diarize"
+  | "gpt-4o-mini-transcribe"
+  | "gpt-4o-mini-tts"
+  | "gpt-4o-audio-preview"
+  | "gpt-4o-realtime-preview"
+  | "gpt-4o-mini-audio-preview"
+  | "gpt-4o-mini-realtime-preview"
+  | "gpt-realtime"
+  | "gpt-realtime-mini"
+  | "gpt-audio"
+  | "gpt-audio-mini"
+  // Image/Video Models
+  | "gpt-image-1"
+  | "dall-e-3"
+  | "sora"
+  | "sora-2"
+  // Special Models
+  | "model-router"
+  | "computer-use-preview"
+  | "davinci-002"
+
+// OpenAI Models (for OpenAI API)
 export type OpenAILLMID =
-  | "gpt-4o" // GPT-4o
-  | "gpt-4-turbo-preview" // GPT-4 Turbo
-  | "gpt-4-vision-preview" // GPT-4 Vision
-  | "gpt-4" // GPT-4
-  | "gpt-3.5-turbo" // Updated GPT-3.5 Turbo
+  | "gpt-4o"
+  | "gpt-4o-mini"
+  | "gpt-4-turbo-preview"
+  | "gpt-4-vision-preview"
+  | "gpt-4"
+  | "gpt-3.5-turbo"
+  | "dall-e-3"
 
 // Google Models
 export type GoogleLLMID =
