@@ -185,30 +185,7 @@ supabase link --project-ref <project-id>
 supabase db push
 ```
 
-## Security
 
-### Security Features
-
-- ✅ End-to-end encryption for sensitive data
-- ✅ Regular security audits and penetration testing
-- ✅ OWASP Top 10 compliance
-- ✅ Rate limiting on API endpoints
-- ✅ Input validation and sanitization
-- ✅ SQL injection prevention with parameterized queries
-- ✅ XSS protection with Content Security Policy
-- ✅ CORS properly configured
-
-### Reporting Security Issues
-
-⚠️ **Do not** open public GitHub issues for security vulnerabilities.
-
-If you discover a security vulnerability, please email: [security@example.com](mailto:security@example.com)
-
-Please include:
-- Description of the vulnerability
-- Steps to reproduce
-- Potential impact
-- Suggested fix (if available)
 
 ### 🔐 Incoming Security Update (March 2026)
 
