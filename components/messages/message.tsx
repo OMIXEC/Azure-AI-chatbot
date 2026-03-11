@@ -182,14 +182,21 @@ export const Message: FC<MessageProps> = ({
   return (
     <div
       className={cn(
-        "flex w-full justify-center",
-        message.role === "user" ? "" : "bg-secondary"
+        "flex w-full",
+        message.role === "user" ? "justify-end p-4" : "justify-center py-4"
       )}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onKeyDown={handleKeyDown}
     >
-      <div className="relative flex w-full flex-col p-6 sm:w-[550px] sm:px-0 md:w-[650px] lg:w-[650px] xl:w-[700px]">
+      <div
+        className={cn(
+          "relative flex flex-col",
+          message.role === "user"
+            ? "bg-secondary w-fit max-w-[85%] rounded-3xl p-5"
+            : "w-full p-6 sm:w-[550px] sm:px-0 md:w-[650px] lg:w-[650px] xl:w-[700px]"
+        )}
+      >
         <div className="absolute right-5 top-7 sm:right-0">
           <MessageActions
             onCopy={handleCopy}

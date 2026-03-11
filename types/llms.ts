@@ -12,6 +12,7 @@ export type LLMID =
 // Azure OpenAI Models (UPDATED 2/22/26)
 export type AzureLLMID =
   // GPT-5.x Chat Models
+  | "gpt-5.4"
   | "gpt-5.2-chat"
   | "gpt-5.2"
   | "gpt-5.1-chat"
@@ -71,6 +72,7 @@ export type AzureLLMID =
 
 // OpenAI Models (for OpenAI API)
 export type OpenAILLMID =
+  | "gpt-5.4"
   | "gpt-4o"
   | "gpt-4o-mini"
   | "gpt-4-turbo-preview"
@@ -81,6 +83,8 @@ export type OpenAILLMID =
 
 // Google Models
 export type GoogleLLMID =
+  | "gemini-3.1-flash-lite-preview" // Gemini 3.1 Flash Lite Preview
+  | "gemini-flash-3-preview" // Gemini Flash 3 Preview
   | "gemini-pro" // Gemini Pro
   | "gemini-pro-vision" // Gemini Pro Vision
   | "gemini-1.5-pro-latest" // Gemini 1.5 Pro

@@ -11,6 +11,12 @@ export const CHAT_SETTING_LIMITS: Record<LLMID, ChatSettingLimits> = {
   // ========================================
   // AZURE OPENAI MODELS - GPT-5.x
   // ========================================
+  "gpt-5.4": {
+    MIN_TEMPERATURE: 0.0,
+    MAX_TEMPERATURE: 2.0,
+    MAX_TOKEN_OUTPUT_LENGTH: 16384,
+    MAX_CONTEXT_LENGTH: 200000
+  },
   "gpt-5.2-chat": {
     MIN_TEMPERATURE: 0.0,
     MAX_TEMPERATURE: 2.0,
@@ -366,6 +372,18 @@ export const CHAT_SETTING_LIMITS: Record<LLMID, ChatSettingLimits> = {
 
   // GOOGLE MODELS
 
+  "gemini-3.1-flash-lite-preview": {
+    MIN_TEMPERATURE: 0.0,
+    MAX_TEMPERATURE: 1.0,
+    MAX_TOKEN_OUTPUT_LENGTH: 8192,
+    MAX_CONTEXT_LENGTH: 1040384
+  },
+  "gemini-flash-3-preview": {
+    MIN_TEMPERATURE: 0.0,
+    MAX_TEMPERATURE: 1.0,
+    MAX_TOKEN_OUTPUT_LENGTH: 8192,
+    MAX_CONTEXT_LENGTH: 2000000
+  },
   "gemini-1.5-flash": {
     MIN_TEMPERATURE: 0.0,
     MAX_TEMPERATURE: 1.0,

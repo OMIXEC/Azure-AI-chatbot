@@ -151,9 +151,7 @@ export async function POST(request: Request) {
     } as OpenAI.Chat.ChatCompletionCreateParamsStreaming)
 
     // Use type assertion to handle streaming response
-    const stream = OpenAIStream(
-      response as unknown as AsyncIterable<OpenAI.Chat.ChatCompletionChunk>
-    )
+    const stream = OpenAIStream(response as any)
 
     return new StreamingTextResponse(stream)
   } catch (error) {

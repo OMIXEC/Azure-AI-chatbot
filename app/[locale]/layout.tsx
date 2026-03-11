@@ -68,9 +68,13 @@ const i18nNamespaces = ["translation"]
 
 export default async function RootLayout({
   children,
-  params: { locale }
-}: RootLayoutProps) {
-  const cookieStore = cookies()
+  params
+}: {
+  children: ReactNode
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const cookieStore = await cookies()
   const supabase = createServerClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,

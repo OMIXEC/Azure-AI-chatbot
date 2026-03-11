@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  azure-chatbot-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # - NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+      # - NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+      # Add other environment variables from your .env.local file here
+    restart: unless-stopped
